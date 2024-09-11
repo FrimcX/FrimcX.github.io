@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla Principal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="pantalla_principal.css">
+</head>
+<body>
+    <header>
+        <div class="headerUp">
+            <div class="headerUp__item material-symbols-outlined">menu</div>
+            <h2>Panel de Control</h2>
+            <div class="headerUp__item material-symbols-outlined">search</div>
+            <div class="headerUp__item material-symbols-outlined">settings</div>
+        </div>
+        <div class="headerDown">
+            <div class="headerDown__item material-symbols-outlined">hive</div>
+            <div class="headerDown__item material-symbols-outlined">card_membership</div>
+            <div class="headerDown__item material-symbols-outlined">autorenew</div>
+            <div class="headerDown__item material-symbols-outlined">notifications</div>
+        </div>
+    </header>
+    <main>
+        <section class="sectionMain mainApiary">
+            <div class="sectionMain__headline">
+                <h3 class="mainApiary__name">San Benito | La Viluma</h3>
+            </div>
+            <div class="mainApiary__container">
+                <div class="mainApiary__item-container">
+                    <div  id="mainApiary__item" class="mainApiary__item-icon material-symbols-outlined">light_mode</div>
+                    <label for="mainApiary__item">Clima</label>
+                </div>
+                <div class="mainApiary__item-container">
+                    <div class="mainApiary__item-icon material-symbols-outlined">pin_drop</div>
+                    <label for="mainApiary__item">Localización</label>
+                </div>
+                <div class="mainApiary__item-container">
+                    <div class="mainApiary__item-icon material-symbols-outlined">calendar_month</div>
+                    <label for="mainApiary__item">Calendario</label>
+                </div>
+                <div class="mainApiary__item-container">
+                    <div class="mainApiary__item-icon material-symbols-outlined">qr_code_2</div>
+                    <label for="mainApiary__item">Leer código Qr</label>
+                </div>
+                <div class="mainApiary__item-container">
+                    <div class="mainApiary__item-icon material-symbols-outlined">contact_phone</div>
+                    <label for="mainApiary__item">Contactos</label>
+                </div>
+            </div>
+        </section>
+        <section class="sectionMain mainRecentTasks">
+            <div class="sectionMain__headline">
+                <span class="sectionMain__headline-icon material-symbols-outlined">task</span>
+                <h3>Ultimas tres tareas:</h3>
+            </div>
+            <ul>
+                <li><span class="taskDate">12/12/2021 - </span>Comprobar 17</li>
+                <li><span class="taskDate">12/12/2021 - </span>Realizar inspeccion en lugar de la polinizacion</li>
+                <li><span class="taskDate">12/12/2021 - </span>Comprobar 16. Hacer nucleo</li>
+            </ul>
+            <button class="mainButtonAdd">DEFINIR NUEVA ACTIVIDAD</button>
+        </section>
+        <section class="sectionMain mainRecentNotes">
+            <div class="sectionMain__headline">
+                <span class="sectionMain__headline-icon material-symbols-outlined">edit</span>
+                <h3>Ultima nota:</h3>
+            </div>
+            
+            <p><span class="noteDate">06/09/2024 - </span>Etiqueta alzadas 1 azul</p>
+            <button class="mainButtonAdd">REALIZAR UNA NOTA</button>
+        </section>
+        <section class="sectionMain mainRecentTreatment">
+            <div class="sectionMain__headline">
+                <span class="sectionMain__headline-icon material-symbols-outlined">healing</span>
+                <h3>Ultimo tratamiento:</h3>
+            </div>
+            <p><span class="treatmentDate">13/09/2024 - </span>Varroa 37 Verde</p>
+            <button class="mainButtonAdd">REALIZAR UN NUEVO TRATAMIENTO</button>
+        </section>
+        <section class="sectionMain mainRecentVetCheck">
+            <div class="sectionMain__headline">
+                <span class="sectionMain__headline-icon material-symbols-outlined">person</span>
+                <h3>Ultima revision veterinaria:</h3>
+            </div>
+            <p><span class="treatmentDate">20/04/2023 - </span>Colmenas por infestacion de varroa y posible acarosis</p>
+            <button class="mainButtonAdd">NUEVA REVISION VETERINARIA</button>
+        </section>
+    </main>
+</body>
+</html>
