@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla Principal</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-    <link rel="stylesheet" href="pantalla_principal.css">
+    <link rel="stylesheet" href="colmenas.css">
 </head>
 <body>
     <header>
@@ -31,9 +31,9 @@
             <button class="apiarySelectButton material-symbols-outlined">keyboard_arrow_down</button>
         </div>
         <div class="nav__section">
-            <div class="nav__divButton">
+            <a href="/Web/index.html" class="nav__divButton">
                 <label for="nav__button-1" class="nav__divButton-icon material-symbols-outlined">dashboard</label><button id="nav__button-1">Panel de control</button>
-            </div>
+            </a>
             <div class="nav__divButton">
                 <span class="nav__divButton-icon material-symbols-outlined">inventory_2</span><button>Colmenas</button>
             </div>
@@ -134,75 +134,70 @@
     </nav>
 
     <main>
-        <section class="sectionMain mainApiary">
-            <div class="sectionMain__headline" id="mainApiary__headline">
-                <h3 class="mainApiary__name">San Benito | La Viluma</h3>
-                <button class="apiarySelectButton material-symbols-outlined">keyboard_arrow_down</button>
+        <div class="newHive__mainHeader">   
+            <div class="newHive__mainHeader-h3">
+                <label for="hive" class="material-symbols-outlined">inventory_2</label>
+                <h3 id="hive">Colmena</h3>
             </div>
-            <div class="mainApiary__container">
-                <div class="mainApiary__item-container">
-                    <div  id="mainApiary__item" class="mainApiary__item-icon material-symbols-outlined">light_mode</div>
-                    <label for="mainApiary__item">Clima</label>
-                </div>
-                <div class="mainApiary__item-container">
-                    <div class="mainApiary__item-icon material-symbols-outlined">pin_drop</div>
-                    <label for="mainApiary__item">Localización</label>
-                </div>
-                <div class="mainApiary__item-container">
-                    <div class="mainApiary__item-icon material-symbols-outlined">calendar_month</div>
-                    <label for="mainApiary__item">Calendario</label>
-                </div>
-                <div class="mainApiary__item-container">
-                    <div class="mainApiary__item-icon material-symbols-outlined">qr_code_2</div>
-                    <label for="mainApiary__item">Leer código Qr</label>
-                </div>
-                <a href="/Web/assets/colmenas.html" class="mainApiary__item-container">
-                    <div class="mainApiary__item-icon material-symbols-outlined">inventory_2</div>
-                    <label for="mainApiary__item">Colmenas</label>
-                </a>
-                <div class="mainApiary__item-container">
-                    <div class="mainApiary__item-icon material-symbols-outlined">contact_phone</div>
-                    <label for="mainApiary__item">Contactos</label>
-                </div>
+            <button class="newHive__saveButton">GUARDAR</button>
+        </div>
+        <div class="newHive__sectionSelect">
+            <div class="newHive__sectionSelect-tab newHive__sectionSelect-details">
+                <label>DETALLES
+                    <input type="checkbox">
+                </label>
             </div>
-        </section>
-        <section class="sectionMain mainRecentTasks">
-            <div class="sectionMain__headline">
-                <span class="sectionMain__headline-icon material-symbols-outlined">task</span>
-                <h3>Ultimas tres tareas:</h3>
+            <div class="newHive__sectionSelect-tab newHive__sectionSelect-state">
+                    <label>ESTADO
+                        <input type="checkbox">
+                    </label>
             </div>
-            <ul>
-                <li><span class="taskDate">12/12/2021 - </span>Comprobar 17</li>
-                <li><span class="taskDate">12/12/2021 - </span>Realizar inspeccion en lugar de la polinizacion</li>
-                <li><span class="taskDate">12/12/2021 - </span>Comprobar 16. Hacer nucleo</li>
-            </ul>
-            <button class="mainButtonAdd">DEFINIR NUEVA ACTIVIDAD</button>
-        </section>
-        <section class="sectionMain mainRecentNotes">
-            <div class="sectionMain__headline">
-                <span class="sectionMain__headline-icon material-symbols-outlined">edit</span>
-                <h3>Ultima nota:</h3>
-            </div>
-            
-            <p><span class="noteDate">06/09/2024 - </span>Etiqueta alzadas 1 azul</p>
-            <button class="mainButtonAdd">REALIZAR UNA NOTA</button>
-        </section>
-        <section class="sectionMain mainRecentTreatment">
-            <div class="sectionMain__headline">
-                <span class="sectionMain__headline-icon material-symbols-outlined">healing</span>
-                <h3>Ultimo tratamiento:</h3>
-            </div>
-            <p><span class="treatmentDate">13/09/2024 - </span>Varroa 37 Verde</p>
-            <button class="mainButtonAdd">REALIZAR UN NUEVO TRATAMIENTO</button>
-        </section>
-        <section class="sectionMain mainRecentVetCheck">
-            <div class="sectionMain__headline">
-                <span class="sectionMain__headline-icon material-symbols-outlined">person</span>
-                <h3>Ultima revision veterinaria:</h3>
-            </div>
-            <p><span class="treatmentDate">20/04/2023 - </span>Colmenas por infestacion de varroa y posible acarosis</p>
-            <button class="mainButtonAdd">NUEVA REVISION VETERINARIA</button>
-        </section>
+        </div>
+        <table>
+            <tr>
+                <td class="table__dataName">Numero</td>
+                <td><input class="table__dataValue" type="text" placeholder="numero, codigo, etiqueta"></td>
+            </tr>
+            <tr>
+                <td class="table__dataName">Cuadros</td>
+                <td><input class="table__dataValue" type="text" placeholder="numero de cuadros"></td>
+            </tr>
+            <tr>
+                <td class="table__dataName">Tipo</td>
+                <td>
+                    <select class="table__dataValue" name="numero-cuadros" id="numero-cuadros">
+                        <option value="Vertical">Vertical</option>
+                        <option value="Horizontal">Horizontal</option>
+                        <option value="Nucleo">Nucleo</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="table__dataName">Suelo</td>
+                <td>
+                    <select class="table__dataValue" name="tipo-suelo" id="tipo-suelo">
+                        <option value="Suelo antivarroa">Suelo antivarroa</option>
+                        <option value="Suelo solido">Suelo solido</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="table__dataName">Origen</td>
+                <td>
+                    <select class="table__dataValue" name="tipo-suelo" id="tipo-suelo">
+                        <option value="Comprada">Comprada</option>
+                        <option value="Produccion Propia">Produccion Propia</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="table__dataName">Descripcion</td>
+                <td><input class="table__dataValue" type="text" placeholder="Otros tipos, notas"></td>
+            </tr>
+        </table>
     </main>
 
 </body>

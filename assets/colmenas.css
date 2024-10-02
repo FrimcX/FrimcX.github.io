@@ -105,7 +105,12 @@ nav div {
     padding: 0;
     height: 4rem;
     border: none;
+    text-decoration: none;
 }
+
+.nav__divButton:visited {
+    color: #000;
+} 
 
 .nav__divButton button{
     text-align: left;
@@ -142,6 +147,7 @@ main {
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
+    padding: 20px;
 }
 
 .sectionMain {
@@ -161,12 +167,6 @@ main {
     font-weight: lighter;
 }
 
-#mainApiary__headline {
-    text-align: left;
-    display: flex;
-    justify-content: center;
-}
-
 .apiarySelectButton {
     background-color: transparent;
     border: none;
@@ -176,84 +176,87 @@ main {
     width: fit-content;
 }
 
-.mainApiary__container {
-    display: grid;
-    grid-template-areas: 
-    "a a b b"
-    "c c d d"
-    "e e f f";
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    margin: 10px 0;
-}
-
-.mainApiary__container a {
-    text-decoration: none;
-}
-
-.mainApiary__container a:visited {
-    color: #000;
-}
-
-.mainApiary__item-container {
+.newHive__mainHeader {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
     align-items: center;
-    text-align: center;
-    box-shadow: 0 0 7px #0005;
-    border-radius: 5px;
-    padding: 8px 0px;
+    font-size: 1.1rem;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #fa2;
 }
 
-.mainApiary__item-container:first-child {
-    grid-area: a;
-}
-
-.mainApiary__item-container:nth-child(2) {
-    grid-area: b;
-}
-
-.mainApiary__item-container:nth-child(3) {
-    grid-area: c;
-}
-
-.mainApiary__item-container:nth-child(4) {
-    grid-area: d;
-}
-
-.mainApiary__item-container:nth-child(5) {
-    grid-area: e;
-}
-
-.mainApiary__item-container:last-child {
-    grid-area: f;
-}
-
-.mainApiary__item-icon {
-    font-size: 2.5rem;
-}
-
-.sectionMain__headline {
+.newHive__mainHeader-h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 7px;
 }
 
-.sectionMain__headline-icon {
-    font-size: 1.9rem;
-    margin-right: 8px;
+.newHive__mainHeader-h3 label{
+    font-size: 1.8rem;
 }
 
-.mainButtonAdd {
+.newHive__mainHeader button {
     background-color: #fa2;
     border: none;
-    font-size: 1rem;
-    margin: 20px 0;
-    padding: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
     box-shadow: 0 0 10px #0005;
+}
+
+.newHive__sectionSelect {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-basis: 1;
+}
+
+.newHive__sectionSelect-tab {
+    padding: 25px;
+    flex-grow: 1;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.newHive__sectionSelect-tab label {
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+.newHive__sectionSelect-tab input[type="checkbox"] {
+    display: none;
+}
+
+.newHive__sectionSelect-tab:has(input[type="checkbox"]:checked) {
+    border-bottom: 3px solid #48e;
+}
+
+
+
+/* ------------------------------------------
+------------------TABLE -------------------
+------------------------------------------------*/
+
+.table__dataName {
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.table__dataValue {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #0005;
+    width: 100%;
+    height: 2rem;
+    padding: 0 5px;
+}
+
+tr {
+    height: 4rem;
 }
